@@ -1,21 +1,17 @@
-import React from 'react';
-import { ScrollView, View,Image, ImageBackground } from 'react-native';
-import Greeting from '../components/Greeting';
-import Menu from '../components/Menu';
-import Location from '../components/Location';
-import Menu2 from '../components/Menu2';
+import React from "react";
+import { ScrollView, View } from "react-native";
+import FoodFlatList from "../components/FoodFlatList";
+import Locationmini from "../components/Locationmini";
 
-export default function Home() {
+export default function Shopfood() {
     return (
         <ScrollView>
-            <View style={{ backgroundColor: "#e8f5e9", height : 1000, justifyContent:"space-around", marginTop :20 }}>
-                <View style={{ flex: 1, paddingTop : 10  }}>
-                    <Location/>
-                    <Menu2/>
-                    <Menu/>
-                    
-                </View>
+            <View style={{ flex: 1, backgroundColor: '#e8f5e9' ,resizeMode : "cover", width:450,height:1000}}>
+                <Locationmini/>
+                <FoodFlatList style={{ margin: 20 }}/>
             </View>
         </ScrollView>
+
     );
 }
+

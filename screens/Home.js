@@ -3,7 +3,8 @@ import { ScrollView, View,Image, ImageBackground } from 'react-native';
 import Greeting from '../components/Greeting';
 import Menu from '../components/Menu';
 import Location from '../components/Location';
-import Menu2 from '../components/Menu2';
+import HomeMenu from '../components/HomeMenu';
+// import Promotion from '../components/promotion';
 
 export default function Home() {
     return (
@@ -12,8 +13,9 @@ export default function Home() {
                 <View style={{ flex: 1, paddingTop : 50  }}>
                     <Greeting/>
                     <Location/>
-                    <Menu2/>
-                    <Menu/>
+                    <HomeMenu/>
+                    {/* <Menu/> */}
+                    {/* <Promotion/> */}
                     
                 </View>
             </ImageBackground>
