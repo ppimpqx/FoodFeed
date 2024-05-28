@@ -146,15 +146,15 @@ export default function RecipeDetail() {
             </View>
             <Text style={{ color:"#009688",fontSize: 20, marginVertical: 10, paddingLeft:40}}>ชื่อเมนู </Text>
             <View style={{ backgroundColor:'white',marginBottom: 15 , borderRadius:20, marginLeft:40,marginRight:40 }}>   
-                <Text style={{ fontSize: 20, marginVertical: 10, paddingLeft:40 }}>{recipe.name} </Text>
+                <Text style={{ fontSize: 18, marginVertical: 10, paddingLeft:40 }}>{recipe.name} </Text>
             </View>  
             <Text style={{ color:"#009688",fontSize: 20, marginVertical: 10, paddingLeft:40}}>วัตถุดิบ </Text>
             <View style={{ backgroundColor:'white',marginBottom: 15 , borderRadius:20, marginLeft:40,marginRight:40 }}>   
-                <Text style={{ fontSize: 20 , marginVertical: 10, paddingLeft:40}}>{recipe.ingredients}</Text>
+                <Text style={{ fontSize: 18 , marginVertical: 10, paddingLeft:40}}>{recipe.ingredients}</Text>
             </View>   
             <Text style={{ color:"#009688",fontSize: 20, marginVertical: 10, paddingLeft:40}}>วิธีทำ </Text>
             <View style={{ backgroundColor:'white',marginBottom: 15 , borderRadius:20, marginLeft:40,marginRight:40 }}>   
-                <Text style={{ fontSize: 20, marginVertical: 10 , paddingLeft:40, paddingRight:30}}>{recipe.directions}</Text>
+                <Text style={{ fontSize: 18, marginVertical: 10 , paddingLeft:40, paddingRight:30}}>{recipe.directions}</Text>
             </View>
         </ScrollView></ImageBackground>
     );

@@ -24,7 +24,7 @@ export default function BottomTab() {
       />
       <Tab.Screen
         name="Order"
-        component={Order}
+        component={WantToEat}
         options={{
           tabBarLabel: "Order",
           tabBarIcon: ({ color, size }) => ( <FontAwesome6 name="rotate-left" color={color} size={size} /> ),
@@ -32,7 +32,7 @@ export default function BottomTab() {
       />
       <Tab.Screen
         name="Inbox"
-        component={Inbox}
+        component={WantToEat}
         options={{
           tabBarLabel: "Inbox",
           tabBarIcon: ({ color, size }) => ( <FontAwesome6 name="inbox" color={color} size={size} /> ),

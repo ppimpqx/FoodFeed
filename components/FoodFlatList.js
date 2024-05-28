@@ -119,31 +119,28 @@ export default function FoodFlatList(props) {
         try {
             let promise = await fetch('https://raw.githubusercontent.com/ppimpqx/FoodFeed/main/data.json');
             let data = await promise.json();
-            console.log("Load Data 111 : ", data);
-            //SET STATE
+            console.log("Loaded Data: ", data);
             setOnlineFood(data);
         } catch (error) {
-            console.log("ERROR : ", error);
+            console.log("Error: ", error);
         }
     }
 
     useEffect(() => {
-        console.log("OF", onlineFood)
         loadOnlineFood();
     }, []);
 
-
     return (
         <View style={props.style}>
-            <Text style={{ fontSize: 20 , paddingLeft:10, paddingBottom:10}}>Enjoy your Meal!</Text>
+            <Text style={{ fontSize: 20, paddingLeft: 10, paddingBottom: 10 }}>Enjoy your Meal!</Text>
             <FlatList
                 data={onlineFood}
                 renderItem={({ item }) => (
                     <View>
                         {item.restaurants.map((restaurant, restaurantIndex) => (
-                            <View key={restaurantIndex} style={{backgroundColor: 'white', borderRadius: 10, padding:20, flexDirection:'row', marginVertical:10}}>
-                                <Image style={{ width: 90, height: 110, borderRadius: 10}} source={{ uri: restaurant.photograph}}/> 
-                                <View style={{ paddingLeft: 20, paddingTop:20}}>
+                            <View key={restaurantIndex} style={{ backgroundColor: 'white', borderRadius: 10, padding: 20, flexDirection: 'row', marginVertical: 10 }}>
+                                <Image style={{ width: 90, height: 110, borderRadius: 10 }} source={{ uri: restaurant.photograph }} />
+                                <View style={{ paddingLeft: 20, paddingTop: 20 }}>
                                     <Text style={{ fontSize: 20, color: "#009688" }}>{restaurant.name}</Text>
                                     <Text style={{ fontSize: 15, color: "gray" }}>{restaurant.cuisine_type}</Text>
                                     <Text style={{ fontSize: 15, color: "gray" }}>{restaurant.address}</Text>
@@ -152,7 +149,7 @@ export default function FoodFlatList(props) {
                         ))}
                     </View>
                 )}
-                keyExtractor={item => item.id}
+                keyExtractor={(item, index) => index.toString()} 
             />
         </View>
     );
