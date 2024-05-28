@@ -6,12 +6,13 @@ import HomeStack from './HomeStack';
 import Order from '../screens/Order';
 import Inbox from '../screens/Inbox';
 import More from '../screens/More';
-import Shopfood from '../screens/Shopfood';
+import Foodshop from '../screens/Foodshop';
+import WantToEat from '../screens/WantToEat';
 
 const Tab = createBottomTabNavigator();
 export default function BottomTab() {
   return (
-    <Tab.Navigator screenOptions={{ tabBarActiveTintColor: '#009688', tabBarInactiveTintColor: 'gray' }}>
+    <Tab.Navigator screenOptions={{ tabBarActiveTintColor: '#009688', tabBarInactiveTintColor: '#B3DBB6' }}>
       <Tab.Screen
         name="HomeStack" 
         component={HomeStack}
@@ -38,21 +39,29 @@ export default function BottomTab() {
         }}
       />
       <Tab.Screen
-        name="More"
-        component={More}
+        name="User"
+        component={WantToEat}
         options={{
-          tabBarLabel: "More",
-          tabBarIcon: ({ color, size }) => ( <FontAwesome6 name="bars" color={color} size={size} /> ),
+          tabBarLabel: "User",
+          tabBarIcon: ({ color, size }) => ( <FontAwesome6 name="person" color={color} size={size} /> ),
         }}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Food"
-        component={Shopfood}
+        component={Foodshop}
         options={{
           tabBarLabel: "Food",
           tabBarIcon: ({ color, size }) => ( <FontAwesome6 name="bowl-food" color={color} size={size} /> ),
         }}
-      />
+      /> */}
+      {/* <Tab.Screen
+        name="Favorite"
+        component={TodoList}
+        options={{
+          tabBarLabel: "Favorite",
+          tabBarIcon: ({ color, size }) => ( <FontAwesome6 name="heart" color={color} size={size} /> ),
+        }}
+      /> */}
     </Tab.Navigator>
   );
 }
