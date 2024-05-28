@@ -1,2 +1,2 @@
 How to run
-// expo npx start
+ - expo npx start
